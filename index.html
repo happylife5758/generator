@@ -810,28 +810,28 @@ let geminiPrompt;
 
 if (selectedModel.includes('veo-3.0')) {
 geminiPrompt = `
-Analisa gambar produk fashion yang diberikan. 
-Identifikasi detail produk seperti: jenis pakaian, warna, bahan, desain, kesan gaya dan analisa background (jika background polos berikan promt background yang sesuai).
-Lalu buat prompt untuk video iklan fashion dengan format:
--berjalan seperti model profesional dan natural
--tingkah anggun dan berkarisma
--wajah menampakkan kebanggan karena mengenakan outfit yang dikenakan
--berikan promt background yang sesuai dan tepat dengan model
--berikan pencahayaan yang terang dan jelas
--berikan audio yang tepat dan sesuai dengan situasi yang sudah kamu analisa
-kemudian jawab dengan sebuah promt sempurna dalam bahasa indonesia.
+Ubah gambar produk fashion yang diberikan menjadi narasi video iklan fashion dalam bahasa Indonesia. 
+Langsung berikan narasi iklan yang utuh, tanpa analisa poin-poin. 
+Narasi harus mencakup:
+- Model berjalan anggun, profesional, namun tetap natural
+- Ekspresi wajah penuh percaya diri dan berkarisma
+- Detail outfit (warna, bahan, desain, dan kesan gaya)
+- Latar belakang yang sesuai (jika background polos, gunakan background estetik yang cocok)
+- Pencahayaan terang dan jelas
+- Audio atau suasana yang mendukung iklan fashion
+Jawaban hanya berupa satu paragraf narasi iklan, tidak boleh ada subjudul atau poin analisa.
 `;
 } else {
 geminiPrompt = `
-Analisa gambar produk fashion yang diberikan. 
-Identifikasi detail produk seperti: jenis pakaian, warna, bahan, desain, kesan gaya dan analisa background (jika background polos berikan promt background yang sesuai).
-Lalu buat prompt untuk video iklan fashion dengan format:
--berjalan seperti model profesional dan natural
--tingkah anggun dan berkarisma
--wajah menampakkan kebanggan karena mengenakan outfit yang dikenakan
--berikan promt background yang sesuai dan tepat dengan model
--berikan pencahayaan yang terang dan jelas
-kemudian jawab dengan sebuah promt sempurna dalam bahasa indonesia.
+Ubah gambar produk fashion yang diberikan menjadi narasi video iklan fashion dalam bahasa Indonesia. 
+Langsung berikan narasi iklan yang utuh, tanpa analisa poin-poin. 
+Narasi harus mencakup:
+- Model berjalan anggun, profesional, namun tetap natural
+- Ekspresi wajah penuh percaya diri dan berkarisma
+- Detail outfit (warna, bahan, desain, dan kesan gaya)
+- Latar belakang yang sesuai (jika background polos, gunakan background estetik yang cocok)
+- Pencahayaan terang dan jelas
+Jawaban hanya berupa satu paragraf narasi iklan, tidak boleh ada subjudul atau poin analisa.
 `;
 }
 
@@ -1353,6 +1353,7 @@ reader.readAsDataURL(file);
     © 2025 - Developed by: <span class="credit-name">HappyLife5758</span>
 </footer>
 </html>
+
 
 
 
