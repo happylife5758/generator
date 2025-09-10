@@ -810,24 +810,28 @@ let geminiPrompt;
 
 if (selectedModel.includes('veo-3.0')) {
 geminiPrompt = `
-Analisis gambar ini dan buat prompt video sinematik untuk model Veo 3.
-- Jangan perlihatkan bagian belakang (punggung) model manusia.
-- Pastikan gerakan manusia digambarkan natural, halus, tidak kaku, tidak aneh.
-- Tambahkan background/lingkungan yang sesuai dengan konteks gambar.
-- Ubah background sejak detik pertama.
-- Sarankan aksi manusia yang realistis dan wajar.
-- Akhiri dengan deskripsi audio yang sesuai dalam format: , audio: [deskripsi].
-Jawab hanya dalam satu baris dalam bahasa Inggris.
+Analisa gambar produk fashion yang diberikan. 
+Identifikasi detail produk seperti: jenis pakaian, warna, bahan, desain, kesan gaya dan analisa background (jika background polos berikan promt background yang sesuai).
+Lalu buat prompt untuk video iklan fashion dengan format:
+-berjalan seperti model profesional dan natural
+-tingkah anggun dan berkarisma
+-wajah menampakkan kebanggan karena mengenakan outfit yang dikenakan
+-berikan promt background yang sesuai dan tepat dengan model
+-berikan pencahayaan yang terang dan jelas
+-berikan audio yang tepat dan sesuai dengan situasi yang sudah kamu analisa
+kemudian jawab dengan sebuah promt sempurna dalam bahasa indonesia.
 `;
 } else {
 geminiPrompt = `
-Analisis gambar ini dan buat prompt video sinematik untuk model Veo 2.
-- Jangan perlihatkan bagian belakang (punggung) model manusia.
-- Pastikan gerakan manusia digambarkan natural, halus, tidak kaku, tidak aneh.
-- Tambahkan background/lingkungan yang sesuai dengan konteks gambar.
-- Ubah background sejak detik pertama.
-- Sarankan aksi manusia yang realistis dan wajar.
-Jawab hanya dalam satu baris dalam bahasa Inggris. Jangan sertakan deskripsi audio.
+Analisa gambar produk fashion yang diberikan. 
+Identifikasi detail produk seperti: jenis pakaian, warna, bahan, desain, kesan gaya dan analisa background (jika background polos berikan promt background yang sesuai).
+Lalu buat prompt untuk video iklan fashion dengan format:
+-berjalan seperti model profesional dan natural
+-tingkah anggun dan berkarisma
+-wajah menampakkan kebanggan karena mengenakan outfit yang dikenakan
+-berikan promt background yang sesuai dan tepat dengan model
+-berikan pencahayaan yang terang dan jelas
+kemudian jawab dengan sebuah promt sempurna dalam bahasa indonesia.
 `;
 }
 
@@ -1349,6 +1353,7 @@ reader.readAsDataURL(file);
     © 2025 - Developed by: <span class="credit-name">HappyLife5758</span>
 </footer>
 </html>
+
 
 
 
