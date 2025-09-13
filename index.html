@@ -810,28 +810,21 @@ let geminiPrompt;
 
 if (selectedModel.includes('veo-3.0')) {
 geminiPrompt = `
-Ubah gambar produk fashion yang diberikan menjadi narasi video iklan fashion dalam bahasa Indonesia. 
-Langsung berikan narasi iklan yang utuh, tanpa analisa poin-poin. 
-Narasi harus mencakup:
-- Model berjalan anggun, profesional, namun tetap natural
-- Ekspresi wajah penuh percaya diri dan berkarisma
-- Detail outfit (warna, bahan, desain, dan kesan gaya)
-- Latar belakang yang sesuai (jika background polos, gunakan background estetik yang cocok)
-- Pencahayaan terang dan jelas
-- Audio atau suasana yang mendukung iklan fashion
-Jawaban hanya berupa satu paragraf promt sempurna, tidak boleh ada subjudul atau poin analisa.
+Analisis gambar ini dan buat prompt video sinematik untuk model Veo 3.
+- Tambahkan background/lingkungan yang sesuai dengan konteks gambar.
+- Pastikan gerakan manusia digambarkan natural, halus, tidak kaku, tidak aneh.
+- Sarankan aksi manusia yang realistis dan wajar.
+- Akhiri dengan deskripsi audio yang sesuai dalam format: , audio: [deskripsi].
+Jawab hanya dalam satu baris dalam bahasa Inggris.
 `;
 } else {
 geminiPrompt = `
-Ubah gambar produk fashion yang diberikan menjadi narasi video iklan fashion dalam bahasa Indonesia. 
-Langsung berikan narasi iklan yang utuh, tanpa analisa poin-poin. 
-Narasi harus mencakup:
-- Model berjalan anggun, profesional, namun tetap natural
-- Ekspresi wajah penuh percaya diri dan berkarisma
-- Detail outfit (warna, bahan, desain, dan kesan gaya)
-- Latar belakang yang sesuai (jika background polos, gunakan background estetik yang cocok)
-- Pencahayaan terang dan jelas
-Jawaban hanya berupa satu paragraf promt sempurna, tidak boleh ada subjudul atau poin analisa.
+Analisis gambar ini dan buat prompt video sinematik untuk model Veo 2.
+Analisis gambar ini dan buat prompt video sinematik untuk model Veo 3.
+- Tambahkan background/lingkungan yang sesuai dengan konteks gambar.
+- Pastikan gerakan manusia digambarkan natural, halus, tidak kaku, tidak aneh.
+- Sarankan aksi manusia yang realistis dan wajar.
+Jawab hanya dalam satu baris dalam bahasa Inggris. Jangan sertakan deskripsi audio.
 `;
 }
 
@@ -1365,6 +1358,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777083&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
 </html>
+
 
 
 
