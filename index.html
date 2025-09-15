@@ -15,14 +15,15 @@
 	
 	
 	<style>
-/* --- Happy Life Theme with Fresh Turquoise & Teal --- */
+/* --- Elegant Purple Theme with Solid Background --- */
     
 :root {
-    --bg-dark: #5EC9C1; /* turquoise background */
-    --bg-panel: #2C8C85; /* teal panel */
-    --border-gradient: linear-gradient(135deg, #2C8C85, #46AFA5, #7ED9D1);
-    --text-primary: #ffffff; /* putih bersih agar kontras */
-    --text-accent: #FFD166; /* kuning pastel hangat sebagai aksen */
+    --bg-dark: #2b0f4d;
+    --bg-panel: #3c1770;
+    --border-gradient: linear-gradient(135deg, #7c3aed, #9333ea, #a855f7);
+    --text-primary: #f8f7f2;
+    --text-accent: #facc15;
+    --accent-teal: #14b8a6;
 }
 
 body {
@@ -53,15 +54,15 @@ body {
     font-weight: bold;
     color: var(--text-primary);
     margin: 0;
-    white-space: nowrap;        
+    white-space: nowrap;        /* selalu satu baris */
     overflow: hidden;
-    text-overflow: ellipsis;    
-}
+    text-overflow: ellipsis;    /* kalau kepanjangan jadi ... */
+}s
 
 /* Deskripsi responsif */
 .header-content p {
     font-size: clamp(0.875rem, 2.5vw, 1.125rem);
-    color: #e0f7f5; /* abu muda kebiruan */
+    color: #d1d5db; /* gray-300 */
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -72,7 +73,7 @@ body {
 @media (max-width: 640px) {
     .header-content h1,
     .header-content p {
-        white-space: normal; 
+        white-space: normal; /* wrap di mobile */
     }
 }
 
@@ -111,9 +112,9 @@ body {
 
 /* --- Image Preview with Gradient Border --- */
 .image-preview {
-    width: 64px;
-    height: 64px;
-    border: 1px solid transparent;
+    width: 128px;
+    height: 128px;
+    border: 2px solid transparent;
     border-radius: 0.5rem;
     background: var(--bg-panel) padding-box, var(--border-gradient) border-box;
     display: flex;
@@ -136,9 +137,64 @@ button, .panel {
 }
 
 button:hover, .panel:hover {
-    background: #46AFA5; /* lebih terang saat hover */
+    background: #4b1d8f;
     color: var(--text-accent);
     cursor: pointer;
+}
+
+/* --- Iklan & Review Generator Specific Styles --- */
+.creative-option input:checked + label {
+    background-color: var(--accent-teal);
+    color: white;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.5);
+}
+.creative-option label {
+    transition: all 0.2s ease-in-out;
+}
+
+.asset-upload-box {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #6b7280;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.asset-upload-box:hover {
+    border-color: var(--accent-teal);
+    background-color: rgba(20, 184, 166, 0.1);
+}
+.asset-upload-box img.preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.remove-asset-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 9999px;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.asset-upload-box:hover .remove-asset-btn {
+    opacity: 1;
 }
 
 /* --- Responsive Background --- */
@@ -167,8 +223,8 @@ h1, h2, h3, p, span, label {
     background: linear-gradient(var(--bg-panel), var(--bg-panel)) padding-box,
                 var(--border-gradient) border-box;
     display: inline-block;
-    padding: 0.5rem 0.5rem;
-    box-shadow: 0 4px 15px rgba(70, 175, 165, 0.4);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
 }
 
 /* --- Footer --- */
@@ -186,7 +242,6 @@ h1, h2, h3, p, span, label {
     font-weight: 500;
 }
 </style>
-
 
  </head>
 <body class="text-[var(--text-primary)]">
@@ -2286,4 +2341,5 @@ Respond ONLY with the complete script. Do not add any introductory or concluding
     © 2025 - Developed by: <span class="credit-name">Happylife Project</span>
 </footer>
 </html>
+
 
