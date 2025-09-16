@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notifikasi - Happy Life</title>
+<style>
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+
+/* Container that fills viewport and shows the full image */
+.hero {
+min-height: 100vh;
+width: 100%;
+display: grid;
+place-items: center;
+background-image: url('./notif.png');
+background-repeat: no-repeat;
+background-position: center top;
+background-size: cover;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+color: #064c4c;
+}
+
+
+/* For smaller screens we want the logo and message to remain readable if needed */
+.content {
+width: 92%;
+max-width: 720px;
+text-align: center;
+/* the image already contains the design, this ensures any overlay text would be visible */
+padding: 2rem 1rem;
+}
+
+
+/* Optional overlay text (hidden by default) - kept for accessibility / SEO */
+.visually-hidden {
+position: absolute !important;
+height: 1px; width: 1px;
+overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+
+/* Make sure images scale nicely on small viewports */
+img.logo {
+max-width: 180px;
+width: 30vmin;
+height: auto;
+display: block;
+margin: 0 auto 1.25rem auto;\ }
+
+
+/* A simple responsive helper if the user wants the message in HTML (not the graphic) */
+h1 {
+font-size: clamp(1.2rem, 3.8vw, 2.8rem);
+letter-spacing: .02em;
+margin-bottom: .6rem;
+}
+p {
+font-size: clamp(1rem, 2.5vw, 1.35rem);
+line-height: 1.4;
+}
+
+
+/* Make sure the page looks good when printed or on very small screens */
+@media (max-width:420px) {
+.content { padding: 1.25rem; }
+}
+</style>
+</head>
+<body>
+<main class="hero" role="main" aria-labelledby="notif-title">
+<div class="content">
+<!-- If you prefer to use the provided circular logo as a separate image, uncomment the <img> below
+and make sure the file 'Logo happylife.png' (or the correct filename) sits next to this HTML file. -->
+<!-- <img src="./Logo happylife.png" alt="Logo Happy Life" class="logo"> -->
+
+
+<!-- The visual notification is already baked into the background image. For accessibility and search
+engines we include a short, hidden text equivalent. You can remove the .visually-hidden wrapper
+if you prefer visible HTML text on top of the image. -->
+<div class="visually-hidden" aria-hidden="false">
+<h1 id="notif-title">SORRY GUYS</h1>
+<p>Layanan ini sedang dalam perbaikan, mohon coba akses lagi nanti.</p>
+</div>
+
+
+<!-- If you want visible HTML overlay message instead of only the background graphic, remove the
+.visually-hidden class from the block below and comment-out the .visually-hidden block above. -->
+<!--
+<h1 id="notif-title">SORRY GUYS</h1>
+<p>Layanan ini sedang dalam perbaikan<br>mohon coba akses lagi nanti...</p>
+-->
+</div>
+</main>
+</body>
+</html>
